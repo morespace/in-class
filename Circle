@@ -1,0 +1,24 @@
+public class Circle implements Figure {
+
+    private static final String CIRCLE = "circle";
+    private int radius;
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public String getShape() {
+        return CIRCLE;
+    }
+
+    @Override
+    public void getName() {
+        System.out.println(CIRCLE);
+    }
+
+    @Override
+    public void calculatePerimeter() {
+        System.out.println("Perimeter =" + " " + (int)(Math.PI*radius));
+    }
+}
