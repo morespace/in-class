@@ -1,0 +1,11 @@
+interface Figure {
+
+    String shape = null;
+
+    String getShape();
+
+    void getName();
+
+    void calculatePerimeter();
+
+}
