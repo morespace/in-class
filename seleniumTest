@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class seleniumtest {
+    public static void main(String[] args) {
+
+        WebDriver driver = new FirefoxDriver();
+
+        driver.get("http://ya.ru");
+
+        WebElement searchField = driver.findElement(By.xpath(".//*[@id='text']"));
+
+        searchField.sendKeys("selnium");
+
+        // searchField.submit();
+
+        WebElement searchButton = driver.findElement(By.xpath("//*[text()=\"Найти\"]/.."));
+
+        searchButton.click();
+        
+        System.out.println(
+         driver.findElement(By.xpath("//div[@class='misspell__message']")).getText()
+        );
+
+    }
+}
